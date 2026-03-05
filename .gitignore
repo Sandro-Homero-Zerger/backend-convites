@@ -1,0 +1,20 @@
+# Arquivos de vídeo grandes (se quiser ignorar)
+*.mp4
+*.mov
+*.avi
+
+# Arquivos de imagem
+*.png
+*.jpg
+*.jpeg
+
+# Pastas do sistema
+.gradle/
+.idea/
+build/
+target/
+node_modules/
+
+# Arquivos de ambiente
+.env
+.env.local
