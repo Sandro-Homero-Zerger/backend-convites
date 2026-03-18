@@ -1,7 +1,5 @@
 // Versão final com rota /gerar-convite
 const express = require('express');
-// ... resto do código
-const express = require('express');
 const multer = require('multer');
 const ffmpeg = require('fluent-ffmpeg');
 const path = require('path');
@@ -10,6 +8,8 @@ const cors = require('cors');
 
 const app = express();
 const upload = multer({ dest: 'uploads/' });
+
+// ... TODO O RESTO DO CÓDIGO CONTINUA IGUAL
 
 // Configuração CORS
 app.use(cors({
