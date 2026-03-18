@@ -1,3 +1,6 @@
+// Versão final com rota /gerar-convite
+const express = require('express');
+// ... resto do código
 const express = require('express');
 const multer = require('multer');
 const ffmpeg = require('fluent-ffmpeg');
