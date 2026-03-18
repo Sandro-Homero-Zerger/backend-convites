@@ -3,6 +3,14 @@ const multer = require('multer');
 const ffmpeg = require('fluent-ffmpeg');
 const path = require('path');
 const fs = require('fs');
+const cors = require('cors'); // Adicione esta linha com os outros requires
+
+// Adicione este bloco inteiro antes das suas rotas
+app.use(cors({
+    origin: 'https://convitedomeujeito.shzergerdeveloper.com',
+    methods: ['POST', 'GET', 'OPTIONS'],
+    allowedHeaders: ['Content-Type', 'Authorization']
+}));
 const app = express();
 const upload = multer({ dest: 'uploads/' });
 
