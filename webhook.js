@@ -3,16 +3,20 @@ const multer = require('multer');
 const ffmpeg = require('fluent-ffmpeg');
 const path = require('path');
 const fs = require('fs');
-const cors = require('cors'); // Adicione esta linha com os outros requires
+const cors = require('cors');
 
-// Adicione este bloco inteiro antes das suas rotas
+const app = express(); // <-- PRIMEiro define o app
+
+// DEPOIS usa o app
 app.use(cors({
     origin: 'https://convitedomeujeito.shzergerdeveloper.com',
     methods: ['POST', 'GET', 'OPTIONS'],
     allowedHeaders: ['Content-Type', 'Authorization']
 }));
-const app = express();
+
 const upload = multer({ dest: 'uploads/' });
+
+// ... o resto do código continua IGUAL
 
 app.post('/gerar-convite', upload.array('fotos', 3), async (req, res) => {
     const { nomes, data, local1, endereco1, endereco2 } = req.body;
