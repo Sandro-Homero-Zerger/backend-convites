@@ -5,9 +5,20 @@
   "main": "webhook.js",
   "scripts": {
     "start": "node webhook.js",
-    "dev": "nodemon webhook.js"
+    "dev": "nodemon webhook.js",
+    "probe": "node scripts/probe-video.js",
+    "frames": "node scripts/extrair-frames.js",
+    "test:gerar": "node scripts/test-gerar.js",
+    "build:pages": "node scripts/build-pages.js",
+    "deploy:check": "node scripts/deploy-check.js",
+    "postinstall": "node -e \"try{require('fs').accessSync('modelos/casamento.mp4')}catch(e){console.warn('AVISO: modelos/casamento.mp4 ausente — git lfs pull')}\""
+  },
+  "engines": {
+    "node": ">=18"
   },
   "dependencies": {
+    "@ffmpeg-installer/ffmpeg": "^1.1.0",
+    "@ffprobe-installer/ffprobe": "^2.1.2",
     "express": "^4.18.2",
     "multer": "^1.4.5-lts.1",
     "fluent-ffmpeg": "^2.1.2",

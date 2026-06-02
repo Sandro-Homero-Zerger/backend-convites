@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criar Convite — Convite do Meu Jeito</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/site.css">
+    <link rel="stylesheet" href="/css/extras.css">
+</head>
+<body class="page-criar">
+    <nav class="menu-fixo">
+        <a href="/">Início</a>
+        <a href="/hotmart.html" class="menu-hotmart" data-hotmart>Comprar</a>
+    </nav>
+
+    <div class="parallax-container theme-casamento">
+        <div class="parallax-layer layer-1" id="layer1"></div>
+        <div class="parallax-layer layer-2" id="layer2"></div>
+        <div class="parallax-layer layer-3" id="layer3"></div>
+    </div>
+
+    <section id="upload" style="min-height:100vh;padding-top:100px">
+        <div class="upload-container">
+            <h2>Personalize seu convite em vídeo</h2>
+            <p style="color:#e0e0e0;text-align:center;margin-bottom:20px">
+                Modelo casamento · até 3 fotos · vídeo pronto para WhatsApp
+            </p>
+
+            <div id="codigo-gate" class="codigo-gate">
+                <label for="codigo-input">Código de acesso (enviado após a compra na Hotmart)</label>
+                <input type="text" id="codigo-input" placeholder="Ex: CDMJ-A1B2C3" autocomplete="off">
+                <button type="button" id="codigo-validar" class="btn btn-gold" style="width:100%;border:none;cursor:pointer">Liberar acesso</button>
+                <p id="codigo-msg" class="codigo-msg"></p>
+                <p style="color:rgba(255,255,255,0.6);font-size:0.85rem;margin-top:12px">
+                    Não tem código? <a href="/hotmart.html" style="color:#d4af37" data-hotmart>Adquira na Hotmart</a>
+                </p>
+            </div>
+
+            <div id="gerador-app" style="display:none">
+                <p id="codigo-info" class="codigo-info"></p>
+                <input type="hidden" id="codigo-hidden">
+
+                <div class="upload-area" id="upload-area">
+                    <div class="upload-icon">📁</div>
+                    <p>Arraste suas fotos ou <span class="browse">clique para buscar</span></p>
+                    <input type="file" id="file-input" multiple accept="image/jpeg,image/png" style="display:none">
+                    <div class="upload-hint">Até 3 fotos · JPG ou PNG · Máx 5MB cada</div>
+                </div>
+
+                <div class="preview-area" id="preview-area"></div>
+                <div class="file-counter"><span id="file-count">0</span>/3 fotos</div>
+
+                <form id="upload-form">
+                    <div class="form-group">
+                        <label for="nomes">Nomes do casal</label>
+                        <input type="text" id="nomes" placeholder="Ex: Ana & João" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="data">Data do evento</label>
+                        <input type="date" id="data" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="local1">Local da cerimônia / festa</label>
+                        <input type="text" id="local1" placeholder="Ex: Igreja Nossa Senhora">
+                    </div>
+                    <div class="form-group">
+                        <label for="endereco1">Endereço</label>
+                        <input type="text" id="endereco1" placeholder="Rua, número">
+                    </div>
+                    <div class="form-group">
+                        <label for="endereco2">Cidade / complemento</label>
+                        <input type="text" id="endereco2" placeholder="São Paulo — SP">
+                    </div>
+                    <input type="hidden" id="modelo" value="casamento">
+                    <div class="form-group">
+                        <label for="frase">Frase do convite</label>
+                        <select id="frase" required>
+                            <option value="">Escolha</option>
+                            <option value="romantica">Romântica</option>
+                            <option value="familiar">Familiar</option>
+                            <option value="elegante">Elegante</option>
+                            <option value="alegre">Alegre</option>
+                        </select>
+                    </div>
+                    <button type="submit" id="submit-btn" disabled>Gerar meu convite</button>
+                </form>
+
+                <div class="progress-container" style="display:none">
+                    <div class="progress-bar"><div class="progress-fill" id="progress-fill"></div></div>
+                    <div class="progress-status" id="progress-status">Preparando...</div>
+                </div>
+
+                <div class="result-container" style="display:none">
+                    <h2>Convite gerado com sucesso!</h2>
+                    <div id="video-preview"></div>
+                    <a href="#" id="download-btn" class="download-btn">Baixar vídeo</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="/js/config.js"></script>
+    <script src="/js/generator.js"></script>
+</body>
+</html>

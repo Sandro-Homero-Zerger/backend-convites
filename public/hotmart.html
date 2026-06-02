@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Convite de casamento em vídeo personalizado com suas fotos. Alternativa elegante ao convite impresso.">
+    <title>Convite de Casamento em Vídeo — Oferta Hotmart</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/site.css">
+    <link rel="stylesheet" href="/css/extras.css">
+</head>
+<body>
+    <div class="parallax-container theme-casamento" style="position:fixed;inset:0;z-index:-1">
+        <div class="parallax-layer layer-1"></div>
+        <div class="parallax-layer layer-2"></div>
+        <div class="parallax-layer layer-3"></div>
+    </div>
+
+    <main class="hotmart-page">
+        <p class="hero-tag">Convite do Meu Jeito</p>
+        <h1>Convite de casamento em vídeo — com as fotos de vocês</h1>
+        <p style="font-size:1.1rem;line-height:1.7;color:#e8e8e8">
+            Um filme elegante de ~1 minuto, com <strong>três momentos</strong> reservados para as fotos do casal.
+            Você personaliza online e recebe o MP4 para enviar no WhatsApp, Instagram ou Stories.
+        </p>
+
+        <ul class="beneficios" style="margin:24px 0">
+            <li>Vídeo cinematográfico — não é PDF nem Canva estático</li>
+            <li>Até 3 fotos suas inseridas nos trechos certos do filme</li>
+            <li>Nomes, data, local e frase personalizados</li>
+            <li>Download imediato após gerar</li>
+            <li>Economia frente ao convite impresso (centenas de unidades)</li>
+        </ul>
+
+        <div class="preco-box">
+            <p style="margin-bottom:8px">Oferta de lançamento</p>
+            <p class="preco">R$ 67</p>
+            <p style="color:#ccc;font-size:0.95rem">ou em até 6x no cartão · acesso por código único</p>
+            <a href="#" data-hotmart class="btn btn-gold" style="margin-top:20px;display:inline-block">Quero meu convite</a>
+        </div>
+
+        <h2 style="font-family:'Playfair Display',serif;color:#d4af37;margin:32px 0 16px">Como funciona após a compra</h2>
+        <ol class="steps-list">
+            <li>Você recebe um <strong>código de acesso</strong> por e-mail (página de obrigado da Hotmart).</li>
+            <li>Acessa <a href="/criar.html" style="color:#d4af37">convitedomeujeito.shzergerdeveloper.com/criar</a> e informa o código.</li>
+            <li>Envia as fotos, preenche os textos e clica em gerar.</li>
+            <li>Baixa o vídeo e compartilha com os convidados.</li>
+        </ol>
+
+        <p style="margin-top:32px;color:rgba(255,255,255,0.7);font-size:0.9rem">
+            Dúvidas? Garantia de 7 dias conforme política Hotmart.
+            <a href="/" style="color:#d4af37">Voltar ao site</a>
+        </p>
+    </main>
+
+    <script src="/js/config.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const cfg = window.CONVITE_CONFIG || {};
+            if (cfg.hotmartUrl && !cfg.hotmartUrl.includes('SEU_LINK')) {
+                document.querySelectorAll('[data-hotmart]').forEach((el) => {
+                    el.href = cfg.hotmartUrl;
+                });
+            }
+        });
+    </script>
+</body>
+</html>

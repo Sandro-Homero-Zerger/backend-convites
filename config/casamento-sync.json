@@ -1,0 +1,45 @@
+{
+  "video": {
+    "largura": 1080,
+    "altura": 1920
+  },
+  "fotos": [
+    {
+      "slot": 1,
+      "inicio": 13,
+      "fim": 18,
+      "x": 0,
+      "y": 0,
+      "largura": 1080,
+      "altura": 1920
+    },
+    {
+      "slot": 2,
+      "inicio": 57,
+      "fim": 62,
+      "x": 0,
+      "y": 0,
+      "largura": 1080,
+      "altura": 1920
+    },
+    {
+      "slot": 3,
+      "inicio": 83,
+      "fim": 88,
+      "x": 0,
+      "y": 0,
+      "largura": 1080,
+      "altura": 1920
+    }
+  ],
+  "texto": {
+    "inicio": 102.5,
+    "fim": 108.1,
+    "nomes": { "x": 80, "y": 720, "fontsize": 72 },
+    "frase": { "x": 80, "y": 820, "fontsize": 48, "texto": "Venha celebrar conosco!" },
+    "data": { "x": 80, "y": 900, "fontsize": 36 },
+    "local1": { "x": 80, "y": 960, "fontsize": 28 },
+    "endereco1": { "x": 80, "y": 1010, "fontsize": 22 },
+    "endereco2": { "x": 80, "y": 1050, "fontsize": 22 }
+  }
+}

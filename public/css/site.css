@@ -1,0 +1,599 @@
+
+        /* ===== SEU CDIGO CSS COMPLETO (não mexi em nada) ===== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            overflow-x: hidden;
+        }
+
+        /* ===== MENU FIXO ELEGANTE ===== */
+        .menu-fixo {
+            position: fixed;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 50px;
+            padding: 10px 20px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .menu-fixo a {
+            color: white;
+            text-decoration: none;
+            padding: 8px 20px;
+            border-radius: 30px;
+            font-weight: 500;
+            transition: all 0.3s;
+            font-size: 0.95em;
+            letter-spacing: 0.5px;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+        }
+
+        .menu-fixo a:hover {
+            background: rgba(212, 175, 55, 0.3);
+            color: #d4af37;
+            transform: translateY(-2px);
+        }
+
+        /* ===== NOVO ITEM NO MENU (UPLOAD) ===== */
+        .menu-fixo a:last-child {
+            background: #d4af37;
+            color: #0f172a;
+            font-weight: bold;
+        }
+
+        .menu-fixo a:last-child:hover {
+            background: #b8860b;
+            transform: translateY(-2px);
+        }
+
+        /* ===== CONTAINER DE PARALLAX ===== */
+        .parallax-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            z-index: -1;
+        }
+
+        /* Cada seção terá seu próprio conjunto de layers */
+        .parallax-layer {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            will-change: transform;
+            transition: opacity 0.8s ease;
+        }
+
+        /* ===== TEMAS POR SEO ===== */
+        
+        /* TEMA CASAMENTO (default) */
+        .theme-casamento .layer-1 {
+            background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+                url('https://images.unsplash.com/photo-1511285560929-80b456fea0bc?w=1600');
+            opacity: 1;
+        }
+        .theme-casamento .layer-2 {
+            background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), 
+                url('https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=1600');
+            opacity: 0.5;
+        }
+        .theme-casamento .layer-3 {
+            background-image: linear-gradient(rgba(255,215,0,0.1), rgba(255,215,0,0.1)), 
+                url('https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?w=1600');
+            opacity: 0.3;
+        }
+
+        /* TEMA ANIVERSRIO */
+        .theme-aniversario .layer-1 {
+            background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+                url('https://images.pexels.com/photos/1702373/pexels-photo-1702373.jpeg?auto=compress&cs=tinysrgb&w=1600');
+            opacity: 1;
+        }
+        .theme-aniversario .layer-2 {
+            background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), 
+                url('https://images.pexels.com/photos/2874897/pexels-photo-2874897.jpeg?auto=compress&cs=tinysrgb&w=1600');
+            opacity: 0.6;
+        }
+        .theme-aniversario .layer-3 {
+            background-image: linear-gradient(rgba(255,193,7,0.1), rgba(255,193,7,0.1)), 
+                url('https://images.pexels.com/photos/1267696/pexels-photo-1267696.jpeg?auto=compress&cs=tinysrgb&w=1600');
+            opacity: 0.4;
+        }
+
+        /* TEMA DEBUTANTE */
+        .theme-debutante .layer-1 {
+            background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+                url('https://images.pexels.com/photos/2883045/pexels-photo-2883045.jpeg?auto=compress&cs=tinysrgb&w=1600');
+            opacity: 1;
+        }
+        .theme-debutante .layer-2 {
+            background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), 
+                url('https://images.pexels.com/photos/2064035/pexels-photo-2064035.jpeg?auto=compress&cs=tinysrgb&w=1600');
+            opacity: 0.6;
+        }
+        .theme-debutante .layer-3 {
+            background-image: linear-gradient(rgba(232,130,217,0.1), rgba(232,130,217,0.1)), 
+                url('https://images.pexels.com/photos/638279/pexels-photo-638279.jpeg?auto=compress&cs=tinysrgb&w=1600');
+            opacity: 0.4;
+        }
+
+        /* TEMA FORMATURA */
+        .theme-formatura .layer-1 {
+            background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+                url('https://images.pexels.com/photos/267885/pexels-photo-267885.jpeg?auto=compress&cs=tinysrgb&w=1600');
+            opacity: 1;
+        }
+        .theme-formatura .layer-2 {
+            background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), 
+                url('https://images.pexels.com/photos/159775/library-la-trobe-study-students-159775.jpeg?auto=compress&cs=tinysrgb&w=1600');
+            opacity: 0.6;
+        }
+        .theme-formatura .layer-3 {
+            background-image: linear-gradient(rgba(70,130,180,0.1), rgba(70,130,180,0.1)), 
+                url('https://images.pexels.com/photos/256455/pexels-photo-256455.jpeg?auto=compress&cs=tinysrgb&w=1600');
+            opacity: 0.4;
+        }
+
+        /* TEMA HOMENAGEM */
+        .theme-homenagem .layer-1 {
+            background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+                url('https://images.pexels.com/photos/1024993/pexels-photo-1024993.jpeg?auto=compress&cs=tinysrgb&w=1600');
+            opacity: 1;
+        }
+        .theme-homenagem .layer-2 {
+            background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), 
+                url('https://images.pexels.com/photos/1266045/pexels-photo-1266045.jpeg?auto=compress&cs=tinysrgb&w=1600');
+            opacity: 0.6;
+        }
+        .theme-homenagem .layer-3 {
+            background-image: linear-gradient(rgba(255,105,180,0.1), rgba(255,105,180,0.1)), 
+                url('https://images.pexels.com/photos/287240/pexels-photo-287240.jpeg?auto=compress&cs=tinysrgb&w=1600');
+            opacity: 0.4;
+        }
+
+        /* ===== CONTEDO PRINCIPAL ===== */
+        .content {
+            position: relative;
+            z-index: 10;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        section {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 80px 20px;
+            scroll-margin-top: 80px;
+        }
+
+        .section-container {
+            width: 100%;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+            color: white;
+        }
+
+        .section-header h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5em;
+            font-weight: 900;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            margin-bottom: 15px;
+            background: linear-gradient(135deg, #d4af37, #f5e7c8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .section-header p {
+            font-size: 1.3em;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+            color: #e0e0e0;
+        }
+
+        /* CARDS COM EFEITO VIDRO */
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 25px;
+            padding: 20px 0;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255,255,255,0.1);
+            cursor: pointer;
+        }
+
+        .card:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 25px 45px rgba(212, 175, 55, 0.3);
+            border-color: rgba(212, 175, 55, 0.3);
+        }
+
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+
+        .card:hover img {
+            transform: scale(1.05);
+        }
+
+        .card-content {
+            padding: 20px;
+            text-align: center;
+            color: white;
+        }
+
+        .card h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.6em;
+            color: #d4af37;
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            color: #e0e0e0;
+            line-height: 1.5;
+            font-size: 0.95em;
+        }
+
+        /* BOTES CTA COM CORES TEMTICAS */
+        .section-cta {
+            text-align: center;
+            margin-top: 60px;
+        }
+
+        .section-cta button {
+            border: none;
+            padding: 15px 40px;
+            font-size: 1.1em;
+            font-weight: bold;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #0f172a;
+        }
+
+        .section-cta button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.4);
+        }
+
+        /* CORES DOS BOTES POR TEMA */
+        #casamento .section-cta button {
+            background: linear-gradient(135deg, #d4af37, #b8860b);
+        }
+        #aniversario .section-cta button {
+            background: linear-gradient(135deg, #ff6b6b, #ff4757);
+        }
+        #debutante .section-cta button {
+            background: linear-gradient(135deg, #ff9ff3, #f368e0);
+        }
+        #formatura .section-cta button {
+            background: linear-gradient(135deg, #54a0ff, #2e86de);
+        }
+        #homenagem .section-cta button {
+            background: linear-gradient(135deg, #ffb8b8, #ff6b6b);
+        }
+
+        /* ===== NOVA SEO DE UPLOAD ===== */
+        #upload {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 80px 20px;
+        }
+
+        .upload-container {
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 30px;
+            padding: 40px;
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+
+        .upload-container h2 {
+            font-family: 'Playfair Display', serif;
+            color: white;
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 2em;
+            background: linear-gradient(135deg, #d4af37, #f5e7c8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .upload-area {
+            border: 3px dashed #d4af37;
+            border-radius: 20px;
+            padding: 40px;
+            text-align: center;
+            background: rgba(255,255,255,0.05);
+            cursor: pointer;
+            margin-bottom: 20px;
+            transition: all 0.3s;
+        }
+
+        .upload-area:hover {
+            background: rgba(255,255,255,0.1);
+            transform: scale(1.02);
+        }
+
+        .upload-icon {
+            font-size: 4em;
+            margin-bottom: 10px;
+            color: #d4af37;
+        }
+
+        .upload-area p {
+            color: white;
+            margin-bottom: 10px;
+        }
+
+        .browse {
+            color: #d4af37;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .upload-hint {
+            color: #e0e0e0;
+            font-size: 0.9em;
+            margin-top: 10px;
+        }
+
+        .preview-area {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .preview-item {
+            position: relative;
+            border-radius: 10px;
+            overflow: hidden;
+            aspect-ratio: 1;
+        }
+
+        .preview-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .remove-photo {
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            background: rgba(255,0,0,0.7);
+            color: white;
+            border: none;
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .file-counter {
+            color: white;
+            text-align: right;
+            margin-bottom: 20px;
+            font-size: 0.95em;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            color: white;
+            margin-bottom: 5px;
+            font-weight: 500;
+        }
+
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid rgba(255,255,255,0.2);
+            border-radius: 8px;
+            background: rgba(255,255,255,0.1);
+            color: white;
+            font-size: 1em;
+            transition: all 0.3s;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: #d4af37;
+        }
+
+        .form-group option {
+            background: #0f172a;
+            color: white;
+        }
+
+        #submit-btn {
+            width: 100%;
+            padding: 16px;
+            background: linear-gradient(135deg, #d4af37, #b8860b);
+            color: #0f172a;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.2em;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s;
+            margin-top: 20px;
+        }
+
+        #submit-btn:hover:not(:disabled) {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(212,175,55,0.3);
+        }
+
+        #submit-btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        .progress-container {
+            margin-top: 20px;
+            padding: 20px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 8px;
+        }
+
+        .progress-bar {
+            height: 10px;
+            background: rgba(255,255,255,0.2);
+            border-radius: 5px;
+            overflow: hidden;
+            margin-bottom: 10px;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #d4af37, #b8860b);
+            width: 0%;
+            transition: width 0.3s;
+        }
+
+        .progress-status {
+            color: white;
+            text-align: center;
+        }
+
+        .result-container {
+            text-align: center;
+            color: white;
+            padding: 20px;
+        }
+
+        .result-container h2 {
+            color: #d4af37;
+            margin-bottom: 20px;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .video-preview {
+            margin: 20px 0;
+        }
+
+        .video-preview video {
+            max-width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+        }
+
+        .download-btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background: linear-gradient(135deg, #d4af37, #b8860b);
+            color: #0f172a;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            margin-top: 20px;
+            transition: all 0.3s;
+        }
+
+        .download-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 20px rgba(212,175,55,0.3);
+        }
+
+        /* ===== MOBILE ===== */
+        @media (max-width: 768px) {
+            .menu-fixo {
+                top: 10px;
+                padding: 8px 12px;
+                gap: 5px;
+            }
+
+            .menu-fixo a {
+                padding: 6px 12px;
+                font-size: 0.8em;
+            }
+
+            .section-header h2 {
+                font-size: 2.5em;
+            }
+
+            .cards-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .upload-container {
+                padding: 20px;
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        section {
+            animation: fadeInUp 1s ease-out;
+        }
+    

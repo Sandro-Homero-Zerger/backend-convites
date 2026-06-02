@@ -1,0 +1,11 @@
+{
+  "codigos": {
+    "DEMO-CASAMENTO": {
+      "modelo": "casamento",
+      "maxUsos": 10,
+      "usos": 0,
+      "criadoEm": "2026-06-01T00:00:00.000Z",
+      "nota": "Código de demonstração — remover ou limitar em produção"
+    }
+  }
+}

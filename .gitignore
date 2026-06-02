@@ -18,3 +18,20 @@ node_modules/
 # Arquivos de ambiente
 .env
 .env.local
+
+# Arquivos locais / acidental
+PetPerdidoBlocoNotas.txt
+fonts/*.zip
+modelo-casamento.mp4/
+
+# Geração local
+node_modules/
+uploads/
+outputs/
+debug/
+public/_body.html
+_live-index.html
+
+# Vídeo modelo: versionado via Git LFS (exceção abaixo)
+modelos/*.mp4
+!modelos/casamento.mp4
